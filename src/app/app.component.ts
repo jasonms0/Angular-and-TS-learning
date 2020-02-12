@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
-  title = 'MyAngular';
+  title = '安哥拉';
+  count = 0;
+  increment = ()=>{
+    this.count ++;
+  }
 }

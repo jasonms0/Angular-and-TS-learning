@@ -1,0 +1,37 @@
+<p>foo works!</p>
+<p>foo {{message}}</p>
+<p [innerHTML]="message"></p>
+<!-- <p [innerHTML]="'message'"></p> -->
+<img src="{{ heroImageUrl }}" alt="">
+<img [src]="heroImageUrl" alt="">
+<img bind-src="heroImageUrl">
+
+<button [disabled]="isButtonDisabled">Button</button>
+<p>{{name.split("").reverse().join("-")}}</p>
+
+foo页面中的{{msg}}
+
+<button (click)="onSave()">Save</button>
+<button (click)="onSave2($event)">On Save2</button>
+<button (click)="onSave3($event,'heloworld')">On Save3</button>
+<button on-click="onSave()">On Save4</button>
+
+<button (click)="msg= '哈哈哈'">内联事件处理</button>
+
+<input type="text" [(ngModel)]="msg">
+
+<p class="big bold red">p文字1</p>
+
+<p [class]="'big'">p文字2</p>
+
+<p [class]="['big','bold']">p文字3</p>
+
+<p [class.red]="true">p文字4</p>
+
+<p [ngClass]="{'bold':true,'red':true}">p文字4</p>
+
+<button [style.background-color]="true ? 'cyan': 'grey'" >Save</button>
+<button [style.backgroundColor]="true ? 'cyan': 'grey'" >Save</button>
+<button [style.font-size.em]="true ? 3 : 1" >Big</button>
+<button [style.font-size.%]="true ? 150 : 50" >Small</button>
+<div [ngStyle]="{'color':'red',backgroundColor:'yellow'}">这是div</div>

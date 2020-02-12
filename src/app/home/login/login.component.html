@@ -1,0 +1,37 @@
+<p>login works!</p>
+<p>heroes:</p>
+<ul>
+  <li [id]="'list-' + hero" *ngFor="let hero of heroes; let i = index">
+    {{i}} ------> {{hero}}
+  </li>
+</ul>
+
+<div *ngIf="heroes.length>3; else templateName">有很多英雄</div>
+<ng-template #templateName>没有很多英雄</ng-template>
+
+<div [class.hidden]="!isSpecial">Show with class</div>
+<div [class.hidden]="isSpecial">Hide with class</div>
+
+<div [style.display]="isSpecial?'block':'none'">Show with style</div>
+<div [style.display]="isSpecial?'none':'block'">Hide with style</div>
+
+<div [ngSwitch]="currentHero">
+      <div *ngSwitchCase="'Windstorm'">Windstorm</div>
+      <div *ngSwitchCase="'Bombasto'">Bombasto</div>
+      <div *ngSwitchCase="'Magneta'">Magneta</div>
+      <div *ngSwitchDefault>Tornado</div>
+</div>
+
+<p appHighlight>Highlight me!</p>
+
+<h1>{{currentTime | date:'yyyy-MM-dd HH:mm:ss'}}</h1>
+<h1>{{123 | currency }}</h1>
+<h1>{{123 | currency:'￥' }}</h1> 
+<h1>{{{name:'jack'} | json}}</h1>
+
+<h1>{{'123.134545'| number}}</h1>
+
+<h1>{{ 'Hello' | uppercase  }} </h1>
+<h1>{{'Hello' | lowercase}} </h1>
+
+<h1>{{'zhangsan' | msgformat}}</h1>
